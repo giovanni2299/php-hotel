@@ -39,9 +39,9 @@ $hotels = [
 
 ];
 
-$choose = $_GET['parking'];
+// $choose = $_GET['parking'];
 
-$ranking = intval($_GET['ranking']);
+// $ranking = intval($_GET['ranking']);
 
 ?>
 <!DOCTYPE html>
@@ -57,7 +57,7 @@ $ranking = intval($_GET['ranking']);
 
 <body>
 
-    <form action="" method="get">
+    <!-- <form action="" method="get">
             <select name="parking" id="parking">
                 <option value="si/no"></option>
                 <option value="si">si</option>
@@ -74,7 +74,7 @@ $ranking = intval($_GET['ranking']);
                 <option value="5">5</option>
             </select>
             <button>invia</button>
-    </form>
+    </form> -->
 
     <table class="table">
         <thead>
@@ -102,7 +102,7 @@ $ranking = intval($_GET['ranking']);
         ?>
 
             <tbody>
-                <tr class="
+                <!-- <tr class="
                 <?php if($choose === 'si' && $parking === true && $ranking === $vote){
                     echo 'd-none';
                 }else{
@@ -118,7 +118,8 @@ $ranking = intval($_GET['ranking']);
                 if($choose === 'si/no'){
                     echo 'd-block';
                 }
-                ?>">
+                ?>"> -->
+                <tr>
                     <th scope="row"><?php echo $name; ?></th>
                     <td><?php echo $description; ?></td>
 
