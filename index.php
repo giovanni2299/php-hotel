@@ -39,7 +39,7 @@ $hotels = [
 
 ];
 
-
+$choose = $_GET['parking']
 
 ?>
 <!DOCTYPE html>
@@ -54,6 +54,15 @@ $hotels = [
 </head>
 
 <body>
+
+    <form action="" method="get">
+            <select name="parking" id="parking">
+                <option value="si/no"></option>
+                <option value="si">si</option>
+                <option value="no">no</option>
+            </select>
+            <button>invia</button>
+    </form>
 
     <table class="table">
         <thead>
@@ -81,7 +90,22 @@ $hotels = [
         ?>
 
             <tbody>
-                <tr>
+                <tr class="<?php if($choose === 'si' && $parking === true){
+                    echo 'd-none';
+                }else{
+                    echo '';
+                }
+
+                if($choose === 'no' && $parking === false){
+                    echo '';
+                }else{
+                    echo 'd-none';
+                }
+
+                if($choose === 'si/no'){
+                    echo 'd-block';
+                }
+                ?>">
                     <th scope="row"><?php echo $name; ?></th>
                     <td><?php echo $description; ?></td>
 
