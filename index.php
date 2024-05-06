@@ -80,7 +80,7 @@
 
   <tbody>
     <tr>
-      <td scope="row"><?php echo $name; ?></td>
+      <th scope="row"><?php echo $name; ?></th>
       <td><?php echo $description;?></td>
       <td><?php echo $parking;?></td>
       <td><?php echo $vote;?></td>
@@ -88,11 +88,13 @@
     </tr>
    
   </tbody>
-</table>
-
+  
     <?php
     }
     ?>
+
+</table>
+
   
 </body>
 </html>
