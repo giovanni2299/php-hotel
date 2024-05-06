@@ -38,15 +38,61 @@
         ],
 
     ];
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <title>Php-Hotel</title>
 </head>
 <body>
-    
+   
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Description</th>
+      <th scope="col">Parking</th>
+      <th scope="col">Vote</th>
+      <th scope="col">Distance</th>
+
+    </tr>
+  </thead>
+
+  <?php
+    for($i = 0; $i < count($hotels); $i++){
+        $hotel = $hotels[$i];
+        $name = $hotel['name'];
+        $description = $hotel['description'];
+        $parking = $hotel['parking'];
+        $vote = $hotel['vote'];
+        $distance = $hotel['distance_to_center']
+
+
+
+    ?>
+
+  <tbody>
+    <tr>
+      <td scope="row"><?php echo $name; ?></td>
+      <td><?php echo $description;?></td>
+      <td><?php echo $parking;?></td>
+      <td><?php echo $vote;?></td>
+      <td><?php echo $distance;?></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+    <?php
+    }
+    ?>
+  
 </body>
 </html>
